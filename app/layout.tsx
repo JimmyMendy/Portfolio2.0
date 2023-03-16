@@ -1,4 +1,6 @@
-import './globals.css'
+import '../styles/globals.css'
+import Header from './Header'
+import Footer from './Footer'
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,8 +13,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" >
+      <body>
+        <Header/>
+        {children}
+        <Footer/>
+      </body>
     </html>
   )
 }
