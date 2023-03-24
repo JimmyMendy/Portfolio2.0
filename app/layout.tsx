@@ -14,8 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='bg-main px-5 md:px-11 lg:'>
-        <Header />
+      <body className='overflow-hidden'>
+        
         {children}
         <Footer />
       </body>

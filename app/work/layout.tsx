@@ -6,7 +6,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className=''>
+    <main className='bg-main h-screen'>
       <div>
         {/* @ts-ignore */}
       </div>

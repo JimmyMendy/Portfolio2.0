@@ -8,16 +8,31 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "main": "#ebdbce",
-        "mobile": "#464c46",
-        "mobile-text": "#ebdbce",
-        "contact": "#000000",
+        main: "#ebdbce",
+        mobile: "#464c46",
+        mobileText: "#ebdbce",
+        contact: "#000000",
+        transparent: "transparent",
       },
       screens: {
-        "sm": "576px",
-        "md": "992px",
-        "lg": "1228px",
-      }
+        sm: "576px",
+        md: "992px",
+        lg: "1228px",
+        xl: "1380px",
+      },
+      spacing: {
+        header: "32px",
+        17: "75px",
+        23: "90px",
+        25: "100px",
+        32: "132px",
+      },
+      fontSize: {
+        "10xl": "56px",
+      },
+      lineHeight: {
+        special: "1.15",
+      },
     },
   },
   plugins: [],

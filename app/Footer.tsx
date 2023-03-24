@@ -2,9 +2,13 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>
-      <h1>Hello I am the footer</h1>
-    </div>
+    <footer>
+      <div className='text-xl'>
+      <div></div>
+      <div></div>
+      <div></div>
+      </div>
+    </footer>
   )
 }
 

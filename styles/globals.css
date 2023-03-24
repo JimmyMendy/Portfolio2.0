@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply box-border
+  }
+}
+
+@layer base {
   html {
     @apply scroll-smooth;
+    font-family: 'Neue Montreal';
   }
 }

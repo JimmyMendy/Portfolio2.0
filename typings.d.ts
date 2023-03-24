@@ -4,3 +4,8 @@ export type Work = {
   description: string;
   image: string;
 };
+
+export interface bgcolorProps {
+  bgColor: string,
+  textColor: string
+}
