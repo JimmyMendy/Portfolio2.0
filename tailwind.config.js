@@ -13,6 +13,7 @@ module.exports = {
         mobileText: "#ebdbce",
         contact: "#000000",
         transparent: "transparent",
+        cream: "#ede8e6",
       },
       screens: {
         sm: "576px",

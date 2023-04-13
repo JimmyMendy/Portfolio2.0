@@ -2,16 +2,17 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { bgcolorProps } from "../../typings"
 import MobileMenu from "./Mobile-menu";
 import NavLink from "./NavLink";
+import { motion } from "framer-motion";
+import { FadeIn } from "../Motions/motions";
 
 interface bgcolorProps {
-  bgColor: string,
-  textColor: string
+  bgColor: string;
+  textColor: string;
 }
 
-function Header({bgColor, textColor} : bgcolorProps) {
+function Header({ bgColor, textColor }: bgcolorProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toogleMobileMenu = () => {
@@ -19,8 +20,12 @@ function Header({bgColor, textColor} : bgcolorProps) {
   };
 
   return (
-    <header className={`${bgColor} ${textColor} sticky bg-opacity-0 z-50 `}>
-      <div className='h-24 pt-header md:pt-10 flex justify-between text-xl px-5 md:px-11 lg:'>
+    <motion.header
+      className={`${bgColor} ${textColor} sticky bg-opacity-0 z-50 `}
+      initial='initial'
+      animate='animate'
+    >
+      <motion.div className='h-24 pt-header md:pt-10 flex justify-between text-xl' variants={FadeIn}>
         <Link href='/'>
           <h1>Jimmy Mendy</h1>
         </Link>
@@ -53,8 +58,8 @@ function Header({bgColor, textColor} : bgcolorProps) {
         >
           <MobileMenu setMobileMenuOpen={setMobileMenuOpen} />
         </div>
-      </div>
-    </header>
+      </motion.div>
+    </motion.header>
   );
 }
 

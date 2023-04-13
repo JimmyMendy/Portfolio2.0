@@ -1,6 +1,7 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 import Header from "./Header";
 import Footer from "./Footer";
+import Loader from "./Loader";
 
 export const metadata = {
   title: `Jimmy's portfolio`,
@@ -14,10 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className='overflow-hidden'>
-        
+      <body className="bg-main h-screen px-5 md:px-11 lg:">
+
+        <Header bgColor='bg-main' textColor='text-black' />
         {children}
-        <Footer />
+        <Footer bgColor='bg-transparent' textColor='text-black' />
+        
       </body>
     </html>
   );

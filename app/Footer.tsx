@@ -1,14 +1,35 @@
-import React from 'react'
+"use client"
 
-function Footer() {
+import React from 'react'
+import Link from 'next/link'
+import { motion } from "framer-motion";
+import { FadeIn } from "../Motions/motions";
+
+interface bgcolorProps {
+  bgColor: string;
+  textColor: string;
+}
+
+function Footer({bgColor, textColor} : bgcolorProps) {
   return (
-    <footer>
-      <div className='text-xl'>
-      <div></div>
-      <div></div>
-      <div></div>
+    <motion.footer
+      initial='initial'
+      animate='animate'
+    >
+      <motion.div className='text-xl flex justify-between pb-14 items-center' variants={FadeIn}>
+      <div className="flex flex-col">
+        <span>Jimmy Mendy</span>
+        <span>Front end developer</span>
       </div>
-    </footer>
+      <div className="flex">
+        <Link href="https://twitter.com/JimmyMendy">Twitter</Link>
+        <Link href="https://github.com/JimmyMendy">Github</Link>
+      </div>
+      <div>
+        Development Jimmy Mendy
+      </div>
+      </motion.div>
+    </motion.footer>
   )
 }
 

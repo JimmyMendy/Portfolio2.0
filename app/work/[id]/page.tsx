@@ -1,8 +1,8 @@
 import React from 'react'
 
-function page() {
+const page = () => {
   return (
-    <main className='text-white'>page</main>
+    <main>page</main>
   )
 }
 
